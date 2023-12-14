@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: #a3ac30;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        .card {
+            background-color: #a3ac30;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        ul li img {
+            float: right;
+            margin-right: 10px;
+            width: 250px;
+            height: 300px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .follow {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .follow h3 {
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .follow a {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 5px;
+        }
+
+        .follow img {
+            width: 50px;
+            height: auto;
+        }
+
+        .card.about {
+            background: #a3ac30;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card.about h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card.about img {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 10px;
+        }
+
+        .card.about p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .about {
+            max-width: 400px;
+        }
+
+        .contact {
+            max-width: 400px;
+        }
+
+        .contact p {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>RJMovie</h1>
+        <p>"Selamat datang di RJMovie - Sumber Utama Hiburan Sinematik! Temukan dunia magis perfilman di ujung jari Anda.</p>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">BERANDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="film terpopuler.html">FILM TERPOPULER</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="kategori.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            KATEGORI
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kategori.html">Aksi</a></li>
+                            <li><a class="dropdown-item" href="komedi.html">Komedi</a></li>
+                            <li><a class="dropdown-item" href="#">Horor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-primary"><a class="nav-link"
+                            href="tentang kami.html">TENTANG KAMI</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card" id="fi1">
+                <h2>Pamali : Dusun Pocong</h2>
+                <h5>Tayang mulai tanggal, 12-Oktober-2023</h5>
+                <img src="11.jpg" width="100%" />
+                <br>
+                <P><button type="submit" class="btn btn-danger">Trailer</button></P>
+                <P><button type="submit" class="btn btn-primary">Tonton</button></P>
+                <p>
+                    <b>Film Pamali : Dusun Pocong ,</b> Menceritakan tentang sebuah desa yang terkena wabah penyakit
+                    misterius. Wabah tersebut sudah menghantui warga desa selama sebulan. Desa tersebut sangat jauh dari
+                    pusat kota.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>1917</h2>
+                <h5>Tayang mulai pada, 18-Januari-2023</h5>
+                <img src="4.jpg" width="100%" /><br>
+                <P><button type="submit" class="btn btn-danger">Trailer</button></P>
+                <P><button type="submit" class="btn btn-primary">Tonton</button></P>
+                <p>
+                    <b>Film 1917,</b>Menceritakan tentang dua prajurit muda Inggris, Will Schofield dan Tom Blake.
+                    Mereka berdua berdua diminta melakukan misi mustahil, yaitu mengirimkan pesan dan melewati territorial
+                    musuh
+                </p>
+            </div>
+
+            <div class="card" id="fi2">
+                <h2>
+                    Pertaruhan The Series 2
+                </h2>
+                <h5>Tayang mulai pada, 7-November-2023</h5>
+                <img src="31.jpg" width="100%" /><br>
+                <P><button type="submit" class="btn btn-danger">Trailer</button></P>
+                <P><button type="submit" class="btn btn-primary">Tonton</button></P>
+                <p>
+                    <b>Film Pertaruhan The Series 2,</b>Menceritakan tentang kehidupan Elzan, yang diperankan oleh Jefri
+                    Nichol. Sebagai mantan narapidana, Elzan terkenal dan memiliki banyak musuh akibat aksi kejahatan
+                    masa lalunya. Meskipun menjadi mantan narapidana, Elzan memiliki tekad membawa saudaranya, Ical,
+                    bersama Wulan, pindah ke Yogyakarta.
+                </p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card about">
+                <h2>FILM TERPOPULER</h2>
+                <img src="3.jpg" alt="Bagus Adri Wandana" />
+                <button type="button" class="btn btn-warning"><a class="nav-link"
+                        href="film terpopuler.html">Liahat Selanjutnya</a></button>
+            </div>
+
+            <div class="card">
+                <h2>Popular Posts</h2>
+                <ul>
+                    <li>
+                        <img src="ptr.jpg" alt="Film1" />
+                        <button type="button" class="btn btn-warning"><a href="#fi1">LIHAT</a></button>
+                    </li><br>
+                    <li>
+                        <img src="ptr1.jpg" alt="Film2" />
+                        <button type="button" class="btn btn-warning"><a href="#fi2">LIHAT</a></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card follow">
+              <h3>Follow Me</h3>
+              <a href="https://wa.me/6282386622127" target="_blank">
+                  <img src="wa.png" alt="WhatsApp">
+              </a>
+              <a href="https://instagram.com/ksrjmsy_" target="_blank">
+                  <img src="ig.png" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/public/Kasirajil-Masykur" target="_blank">
+                  <img src="fb.png" alt="Facebook">
+              </a>
+          </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; RJMovie</p>
+            <p>
+                <a href="index.html">Beranda</a> |
+                <a href="film terpopuler.html">Film Terpopuler</a> |
+                <a href="kategori.html">Kategori</a> |
+                <a href="tentang kami.html">Tentang Kami</a>
+            </p>
+        </div>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
